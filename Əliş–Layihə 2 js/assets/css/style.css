@@ -3,8 +3,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: auto;
+    width: 1000px;
 }
-
+/* main */
 main {
     border: 1px solid lightgrey;
     border-radius: 12px;
@@ -13,56 +14,71 @@ main {
     left: 408px;
     top: 200px;
 }
-
+/* h2 */
 h2 {
     font-size: 26px;
     margin: 10px auto;
     width: fit-content;
 }
+/* Input part */
+#input{
+    display: flex;
+    margin-top: 5px;
+    
+}
+#input input{
+    height: 20px;
+    margin: 0px auto;
+    border-radius: 11px;
+    border: 1px solid lightgrey;
+    background-color: antiquewhite;
+}
+
+/* Tasks part */
+#tasks {
+    width: 80%;
+    border: 1px solid lightgrey;
+    border-radius: 11px;
+    margin: 10px 30px;
+    position: relative;
+    padding-left: 10px;
+    display: none;
+}
+
+
+/* Ul and li part */
+ul{
+    list-style: none;
+}
+
 li{
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 5px;
 }
-
-#input {
-    border: 1px solid lightgrey;
-    border-radius: 11px;
-    margin: 10px 30px;
+li img{
     position: relative;
-    padding-left: 10px;
+    right: 20px;
 }
-
-#add-input {
-    background-color: #AA68FE;
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
+/* Button */
 #button{
     margin: 0px auto;
     background-color: #9953F1;
-    width: 150px;
+    width: 100px;
     height: 42px;
     border: none;
     border-radius: 30px;
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 0px;
     width: 145px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-#add-p{
+#add{
     margin: 10px;
 }
 #asc,
@@ -101,18 +117,8 @@ li{
     display: none;
 } */
 
-#input input{
-    margin: 1px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(218, 228, 226);
-    /* margin-left: 10px; */
-    
-}
-ul{
-    display: none;
-    list-style: none;
-}
+
+
 .x2{
     margin-right: 20px;
 }
