@@ -11,7 +11,7 @@ body {
     min-width: 320px;
 }
 #div{
-    width: 27%;
+    width: 20%;
     min-width: 275px;
     height: 30%;
     margin: 0px auto;
@@ -19,7 +19,6 @@ body {
 }
 /* main */
 main {
-    
     width: 100%;
     /* margin: 0px auto; */
     border: 1px solid lightgrey;
@@ -30,7 +29,6 @@ main {
     width: 100%;
 }
 #divAsc{
-    
     width: 25px;
     margin: 0px 20px 0px auto;
 }
@@ -50,15 +48,15 @@ h2 {
     width: 80%;
     height: 20px;
     margin: 0px auto;
-    margin-top: 5px;
-    
+    margin-top: 5px; 
 }
 #input input{
-    width: 100%;
+    width: calc(100% - 4px);
     height: 20px;
     border-radius: 7px;
     border: 1px solid lightgrey;
-    background-color: antiquewhite;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Tasks part */
@@ -67,12 +65,8 @@ h2 {
     border: 1px solid lightgrey;
     border-radius: 11px;
     margin: 10px auto;
-    padding-left: 4px;
     display: none;
-
 }
-
-
 /* Ul and li part */
 ul{
     list-style: none;
@@ -88,6 +82,7 @@ li{
 li img{
     position: relative;
     right: 20px;
+    cursor: pointer;
 }
 /* Button */
 #button{
@@ -103,6 +98,7 @@ li img{
     justify-content: center;
     padding-left: 0px;
     width: 145px;
+    cursor: pointer;
 }
 #add{
     margin: 10px;
@@ -110,12 +106,8 @@ li img{
 
 #asc:hover{
     opacity: 1.0;
+    cursor: pointer;
 }
-
-.x2{
-    margin-right: 20px;
-}
-.img{
-    position: relative;
-    right: 20px;
+#addbuttons button{
+    cursor: pointer;
 }

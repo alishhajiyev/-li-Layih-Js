@@ -3,8 +3,8 @@ let add = document.querySelector('#add');
 let tasks = document.querySelector('#tasks')
 let ul = document.querySelector('ul');
 let input = document.querySelector('input')
-// Add LI tag;
-add.addEventListener("click", () => {
+// Function adding LI tags
+function addFunction(){
     if (input.value !== '' && input.value !== ' ') {
         let li = document.createElement('li');
         ul.append(li);
@@ -12,9 +12,13 @@ add.addEventListener("click", () => {
         li.innerHTML +='<img class="image" src="assets/x.png">' 
         tasks.style.display = "block";
     }else{
-        alert('Metn daxil edin');
+        alert('Please enter something!');
     }
     input.value="";
+}
+// Add LI tag;
+add.addEventListener("click", () => {
+    addFunction()
 })
 // Changing of photo of remove
 ul.addEventListener("mouseover", (e)=>{
@@ -45,7 +49,6 @@ sort.addEventListener("click", (e)=>{
     // Pushing LI's to array
     for(let elem of listOfLI){
         arr.push(elem.outerHTML)
-        console.log(arr)
     }
     if(count%2===0){
         sort.setAttribute('src', 'assets/ascending.png')
@@ -57,7 +60,7 @@ sort.addEventListener("click", (e)=>{
                 return 1;
             }
             return 0;
-        });console.log(arr)
+        });
     }
     else if(count%2===1){
         sort.setAttribute('src', 'assets/descending.png')
@@ -84,12 +87,14 @@ darkmode.addEventListener("click", ()=>{
     body.style.backgroundColor="rgb(46, 45, 45)"
     document.querySelector('h2').style.color="white"
     ul.style.color="white"
+    input.style.color="white"
 })
 let lightmode = document.getElementById('lightmode');
 lightmode.addEventListener("click", ()=>{
     body.style.backgroundColor="white"
     document.querySelector('h2').style.color="black"
     ul.style.color="black"
+    input.style.color="black"
 })
 let overflow = document.getElementById('overflow');
 overflow.addEventListener("click", ()=>{
@@ -107,15 +112,6 @@ overflow.addEventListener("click", ()=>{
 // ENTER button pressed case
 input.addEventListener('keydown', (event)=>{
     if(event.key=="Enter"){
-        if (input.value !== '' && input.value !== ' ') {
-            let li = document.createElement('li');
-            ul.append(li);
-            li.innerText = input.value;
-            li.innerHTML +='<img class="image" src="assets/x.png">' 
-            tasks.style.display = "block";
-        }else{
-            alert('Metn daxil edin');
-        }
-        input.value="";
+        addFunction()
     }      
 })
